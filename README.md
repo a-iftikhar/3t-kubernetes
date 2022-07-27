@@ -10,7 +10,7 @@
          cd kinstall
          ./run.sh  
 
-##Step2: Setting IP to enviornment 
+## Step2: Setting IP to enviornment 
 
 1. Go to Backend directory open .env files and add your vm's IP address.
          
@@ -22,7 +22,7 @@
          cd Frontend
          vim .env
          
-##Step3: Build Dockerfiles
+## Step3: Build Dockerfiles
 
 1. Now you have to create image of backend with Dockerfile
          
@@ -34,7 +34,7 @@
          cd frontend
          sudo docker build -t frontend .
          
-##Step4: Upload images to Dockerhub repo
+## Step4: Upload images to Dockerhub repo
          
 1. Upload your forntend image to Dockerhub
          
@@ -46,9 +46,9 @@
 
          sudo docker tag frontend abdullah/dkube:backend
          
-###Note: Replace abdullah/dkube in step 6,7 with your repo of docker hub
+### Note: Replace abdullah/dkube in step 6,7 with your repo of docker hub
 
-##Step5: Edit kubernetes files
+## Step5: Edit kubernetes files
 
 1. Go to kubernetes folder and edit frontend deployment file
 
@@ -62,7 +62,7 @@ backend service -> change (image:abdullah037/kube:backend to image:your_dockerre
          
          vim backend-deployment.yaml
          
-##step6: Create deployment and services 
+## Step6: Create deployment and services 
 
          kubectl create -f frontend-deployment.yaml
          kubectl create -f frontend-service.yaml
@@ -71,7 +71,7 @@ backend service -> change (image:abdullah037/kube:backend to image:your_dockerre
          kubectl create -f test-db-deployment.yaml
          kubectl create -f test-db-service.yaml
 
-##Step7: Giving external IP to services
+## Step7: Giving external IP to services
 
 To access the website you have to give your vm's to each service running
          
@@ -79,7 +79,7 @@ To access the website you have to give your vm's to each service running
          kubectl patch svc backend-service -p '{"spec":{"externalIPs":["Your_vm_IP"]}}'
          kubectl patch svc mongodb-service -p '{"spec":{"externalIPs":["Your_vm_IP"]}}'
 
-##Step8: access your website from browser
+## Step8: access your website from browser
           
          your_vm_IP:3000
 
