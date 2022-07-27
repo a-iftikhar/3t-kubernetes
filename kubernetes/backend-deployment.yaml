@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: 3tier-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: 3tier-app
+    spec:
+      containers:
+      - name: backend-container
+        image: abdullah037b/kubeadm:backend
+        ports:
+        - containerPort: 4000
+          name: backend-port                  
