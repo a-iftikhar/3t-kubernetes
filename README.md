@@ -78,7 +78,7 @@ To access the website you have to give your vm's to each service running
          
          kubectl patch svc frontend-service -p '{"spec":{"externalIPs":["Your_vm_IP"]}}' 
          kubectl patch svc backend-service -p '{"spec":{"externalIPs":["Your_vm_IP"]}}'
-         kubectl patch svc mongodb-service -p '{"spec":{"externalIPs":["Your_vm_IP"]}}'
+         kubectl patch svc mongodb -p '{"spec":{"externalIPs":["Your_vm_IP"]}}'
 
 ## Step8: access your website from browser
           
