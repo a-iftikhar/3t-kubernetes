@@ -39,13 +39,13 @@
 1. Upload your forntend image to Dockerhub
          
          sudo docker login
-         sudo docker tag frontend abdullah/dkube:frontend
-         sudo docker push abdullah/dkube:frontend
+         sudo docker tag frontend abdullah037b/dkube:frontend
+         sudo docker push abdullah037b/dkube:frontend
 
 2.Upload your backend image to Dockerhub
 
-         sudo docker tag backend abdullah/dkube:backend
-         sudo docker push abdullah/dkube:backend
+         sudo docker tag backend abdullah037b/dkube:backend
+         sudo docker push abdullah037b/dkube:backend
          
 ### Note: Replace abdullah/dkube in step 6,7 with your repo of docker hub
 
